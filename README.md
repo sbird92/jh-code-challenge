@@ -1,7 +1,7 @@
 # jh-code-challenge
 An app to stream from Twitter API sample Tweet stream. 
 
-The purpose of the app is to technique and organization in how I write code. Its funtion is:
+The purpose of the app is to demonstrate technique and organization in how I write and organize code . Its function is:
 
 1. Utilize the sample stream endpoint provided in the Twitter API.
 2. Track Statistics on the recieved tweets. 
@@ -24,7 +24,7 @@ The purpose of the app is to technique and organization in how I write code. Its
  
 3. Demonstrate Error Handling and Unit Testing
 
-4. Demostrate logging 
+4. Demostrate logging (Not explicitly stated in the requirements doc, but "production ready" code should have this.)
 
 There is no requirement to store the Tweets recived in a database or other durable repository. But thought must be given as to how this could be accomplished.
 
@@ -49,6 +49,9 @@ This service will:
 * Dequeue the tweet object
 * Send Tweet to the metrics processor
 * send metrics to the metrics store.
+
+#### User Interface
+Thought on this is deferred for the time being.
 
 The following documents are provided to demonstrate the thought process that went into creating the apps over all design and may not reflect the state of end product.  
 
