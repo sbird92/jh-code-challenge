@@ -17,6 +17,10 @@ The purpose of the app is to demonstrate technique and organization in how I wri
 
 3. Provide a means of reporting the gathered statitics to the user
 
+## Running the Program
+
+
+
 ## Design Considerations
 1. The app should not block statists reporting while processing tweets. (And vice versa.)
 
