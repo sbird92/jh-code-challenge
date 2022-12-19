@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SCB.TwitterAnalyzer.Infrastructure.Queue\SCB.TwitterAnalyzer.Infrastructure.Queue.csproj" />
     <ProjectReference Include="..\SCB.TwitterAnalyzer.Services.TwitterStream\SCB.TwitterAnalyzer.Services.Tweets.csproj" />
   </ItemGroup>
 

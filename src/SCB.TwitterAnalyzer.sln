@@ -17,7 +17,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D0E4F540-0EB2-4CB4-8C40-5C38A41CC3D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastruucture.App", "SCB.TwitterAnalyzer.Infrastruucture.App\SCB.TwitterAnalyzer.Infrastruucture.App.csproj", "{EF5C4B22-6050-42CF-9840-07EA936B63C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.App", "SCB.TwitterAnalyzer.Infrastruucture.App\SCB.TwitterAnalyzer.Infrastructure.App.csproj", "{EF5C4B22-6050-42CF-9840-07EA936B63C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Services.Tests", "SCB.TwitterAnalyzer.Services.Tests\SCB.TwitterAnalyzer.Services.Tests.csproj", "{C70CF19D-472E-417D-BAE4-5D4323626D14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.Queue", "SCB.TwitterAnalyzer.Infrastructure.Queue\SCB.TwitterAnalyzer.Infrastructure.Queue.csproj", "{CD663B9C-7941-4E8D-87FD-F45F28EB9708}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1804C852-EC90-4FE3-85A1-2444DB161FCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C23F2F58-645B-40E9-B37E-05D952D6A599}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.Queue.Tests", "SCB.TwitterAnalyzer.Queue.Tests\SCB.TwitterAnalyzer.Infrastructure.Queue.Tests.csproj", "{C4302F95-3A6B-4BB8-A407-0F0279E0C880}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +55,18 @@ Global
 		{EF5C4B22-6050-42CF-9840-07EA936B63C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF5C4B22-6050-42CF-9840-07EA936B63C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF5C4B22-6050-42CF-9840-07EA936B63C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C70CF19D-472E-417D-BAE4-5D4323626D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70CF19D-472E-417D-BAE4-5D4323626D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70CF19D-472E-417D-BAE4-5D4323626D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70CF19D-472E-417D-BAE4-5D4323626D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD663B9C-7941-4E8D-87FD-F45F28EB9708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD663B9C-7941-4E8D-87FD-F45F28EB9708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD663B9C-7941-4E8D-87FD-F45F28EB9708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD663B9C-7941-4E8D-87FD-F45F28EB9708}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4302F95-3A6B-4BB8-A407-0F0279E0C880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4302F95-3A6B-4BB8-A407-0F0279E0C880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4302F95-3A6B-4BB8-A407-0F0279E0C880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4302F95-3A6B-4BB8-A407-0F0279E0C880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +77,11 @@ Global
 		{F1ECBAD0-1996-469C-8F05-49B75A381566} = {9101F7CF-FC16-4797-814D-4E0F494B1782}
 		{4AAC90C9-04A7-49DA-954E-C75E3BF82E00} = {3FB85131-580E-48F3-8DAE-220E5D8AACFA}
 		{EF5C4B22-6050-42CF-9840-07EA936B63C4} = {3FB85131-580E-48F3-8DAE-220E5D8AACFA}
+		{C70CF19D-472E-417D-BAE4-5D4323626D14} = {1804C852-EC90-4FE3-85A1-2444DB161FCA}
+		{CD663B9C-7941-4E8D-87FD-F45F28EB9708} = {3FB85131-580E-48F3-8DAE-220E5D8AACFA}
+		{1804C852-EC90-4FE3-85A1-2444DB161FCA} = {D0E4F540-0EB2-4CB4-8C40-5C38A41CC3D4}
+		{C23F2F58-645B-40E9-B37E-05D952D6A599} = {3FB85131-580E-48F3-8DAE-220E5D8AACFA}
+		{C4302F95-3A6B-4BB8-A407-0F0279E0C880} = {C23F2F58-645B-40E9-B37E-05D952D6A599}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15D84A2D-AE23-4CDF-86E6-9D59478AF63C}

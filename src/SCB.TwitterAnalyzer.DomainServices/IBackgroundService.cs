@@ -2,6 +2,6 @@
 
 public interface IBackgroundService
 {
-    void Start();
-    void Stop();
+    Task StartAsync();
+    Task StopAsync();
 }
