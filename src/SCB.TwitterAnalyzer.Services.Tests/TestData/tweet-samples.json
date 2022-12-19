@@ -1,0 +1,79 @@
+﻿[
+  {
+    "data": {
+      "created_at": "2022-12-18T18:47:13.000Z",
+      "edit_history_tweet_ids": [ "1604548858763087872" ],
+      "entities": {
+        "hashtags": [
+          {
+            "start": 108,
+            "end": 129,
+            "tag": "???????_??_??_??_???"
+          }
+        ],
+        "mentions": [
+          {
+            "start": 3,
+            "end": 19,
+            "username": "seyedmohammadww",
+            "id": "1110607722624573441"
+          }
+        ]
+      },
+      "id": "1604548858763087872",
+      "lang": "fa",
+      "source": "Twitter for iPhone",
+      "text": "RT @seyedmohammadww: ??? ???? ?\n????? ??????\n\n????? ??? ?? ??? ????? ?????? ?? ?????? ????? ? ???? ???????\n\n#???????_??_??_??_??? \n#????_??."
+    }
+  },
+  {
+    "data": {
+      "created_at": "2022-12-18T18:47:13.000Z",
+      "edit_history_tweet_ids": [ "1604548858742444032" ],
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 11,
+            "username": "hanniechu3",
+            "id": "1574846568699596800"
+          }
+        ]
+      },
+      "id": "1604548858742444032",
+      "lang": "tr",
+      "source": "Twitter for iPhone",
+      "text": "@hanniechu3 ya özür dilerim çok korktum bidaha degistiremicem diye????"
+    }
+  },
+  {
+    "data": {
+      "created_at": "2022-12-18T18:47:13.000Z",
+      "edit_history_tweet_ids": [ "1604548858763104256" ],
+      "entities": {
+        "mentions": [
+          {
+            "start": 0,
+            "end": 11,
+            "username": "TimCoronel",
+            "id": "47395667"
+          }
+        ],
+        "urls": [
+          {
+            "start": 26,
+            "end": 49,
+            "url": "https://t.co/DuT3E8mwWg",
+            "expanded_url": "https://twitter.com/AleSegnorile25/status/1604548858763104256/photo/1",
+            "display_url": "pic.twitter.com/DuT3E8mwWg",
+            "media_key": "3_1604548849242181635"
+          }
+        ]
+      },
+      "id": "1604548858763104256",
+      "lang": "es",
+      "source": "Twitter for Android",
+      "text": "@TimCoronel Gracias Tim ?? https://t.co/DuT3E8mwWg"
+    }
+  }
+]
