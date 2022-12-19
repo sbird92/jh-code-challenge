@@ -1,0 +1,1 @@
+﻿{"data":{"created_at":"2022-12-18T18:47:14.000Z","edit_history_tweet_ids":["1604548862953148418"],"entities":{"hashtags":[{"start":3,"end":8,"tag":"tweet"}]},"id":"1604548862953148418","lang":"en","source":"Twitter for iPad","text":"AA #tweet A tweet text"}}

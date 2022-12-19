@@ -1,14 +1,12 @@
-﻿
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using SCB.TwitterAnalyzer.Domain.Services;
-using SCB.TwitterAnalyzer.Infrastructure;
+using SCB.TwitterAnalyzer.Infrastructure.Queue;
 using SCB.TwitterAnalyzer.Services.Tweets;
 using SCB.TwitterAnalyzer.Services.TwitterStream;
 
-namespace SCB.TwitterAnalyzer.Infrastruucture.App
+namespace SCB.TwitterAnalyzer.Infrastructure.App
 {
     internal static class ServiceConfiguration
     {
@@ -39,6 +37,7 @@ namespace SCB.TwitterAnalyzer.Infrastruucture.App
                     new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", authToken);
             });
 
+            services.AddSingleton<ITweetQueue, TweetQueueClient>();
             services.AddSingleton<IBackgroundService, SampleStreamService>();
             
             return services.BuildServiceProvider();

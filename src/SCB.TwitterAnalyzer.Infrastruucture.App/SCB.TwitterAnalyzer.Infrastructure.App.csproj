@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SCB.TwitterAnalyzer.Infrastructure.Queue\SCB.TwitterAnalyzer.Infrastructure.Queue.csproj" />
     <ProjectReference Include="..\SCB.TwitterAnalyzer.Infrastructure\SCB.TwitterAnalyzer.Infrastructure.TwitterApi.csproj" />
   </ItemGroup>
 
