@@ -17,7 +17,7 @@ public record Tweet
     public IEnumerable<string> EditHistoryTweetIds { get; init; } = Enumerable.Empty<string>();
     
     [JsonPropertyName("entities")]
-    public Entities? Entities { get; init; }
+    public Entities Entities { get; init; } = new Entities();
     
     [JsonPropertyName("lang")]
     public string Language { get; init; } = string.Empty;

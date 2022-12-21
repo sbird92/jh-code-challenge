@@ -1,15 +1,15 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using SCB.TwitterAnalyzer.Domain.Models;
 using SCB.TwitterAnalyzer.Domain.Services;
 using SCB.TwitterAnalyzer.Services.Tweets;
-using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using System.Text.Json.Serialization;
 
 namespace SCB.TwitterAnalyzer.Services.TwitterStream;
 
-public class SampleStreamService : IBackgroundService
+public class SampleStreamService :  IAsyncService
 {
     private readonly ISampleStreamClient _tweetStreamClient;
     private readonly ITweetQueue _tweetQueue;
@@ -24,23 +24,28 @@ public class SampleStreamService : IBackgroundService
         _logger = logger;
     }
 
-    Task? _streamTask;
+    Task? _executeTask;
     public Task StartAsync()
     {
-        _logger.LogTrace($"Start {nameof(SampleStreamService)}");
-        var token = _source.Token;
-        _streamTask = GetTweetSampleStream(token);
-        return _streamTask;
+        _executeTask = GetTweetSampleStreamAsync(_source.Token);
+        return _executeTask ?? Task.CompletedTask;
     }
 
-    private async Task GetTweetSampleStream(CancellationToken token)
+    public async Task StopAsync()
+    {
+        _source.Cancel();
+        if (_executeTask != null)
+            await _executeTask;
+    }
+
+    private async Task GetTweetSampleStreamAsync(CancellationToken token)
     {
         try
         {
             var enumerator = _tweetStreamClient.GetTweetsSampleStream(token).GetAsyncEnumerator(token);
             while (await enumerator.MoveNextAsync() && !token.IsCancellationRequested)
             {
-                var tweetString = enumerator.Current;
+                 var tweetString = enumerator.Current;
 
                 var tweet = new Tweet();
                 if (TryDeserializeTweet(tweetString, out tweet))
@@ -65,7 +70,7 @@ public class SampleStreamService : IBackgroundService
                 throw new InvalidOperationException($"There is no data node present to deserialize: {json}"); 
 
             tweet = JsonSerializer.Deserialize<Tweet>(data) ?? throw new InvalidOperationException($"Data was not deserializable to a Tweet object: {json}");
-            return tweet != null;
+            return true;
         }
         catch (Exception ex)
         {
@@ -74,14 +79,4 @@ public class SampleStreamService : IBackgroundService
         }
     }
 
-    public async Task StopAsync()
-    {
-        var name = nameof(SampleStreamService);
-        
-        _logger.LogTrace("Stop {name}",name);
-        _source.Cancel();
-
-        if (_streamTask != null)
-            await _streamTask;
-    }
 }

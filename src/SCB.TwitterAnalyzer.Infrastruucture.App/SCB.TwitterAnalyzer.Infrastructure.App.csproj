@@ -13,16 +13,20 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SCB.TwitterAnalyzer.Infrastructure.MetricsStore\SCB.TwitterAnalyzer.Infrastructure.MetricsStore.csproj" />
     <ProjectReference Include="..\SCB.TwitterAnalyzer.Infrastructure.Queue\SCB.TwitterAnalyzer.Infrastructure.Queue.csproj" />
     <ProjectReference Include="..\SCB.TwitterAnalyzer.Infrastructure\SCB.TwitterAnalyzer.Infrastructure.TwitterApi.csproj" />
+    <ProjectReference Include="..\SCB.TwitterAnalyzer.Services.Metrics\SCB.TwitterAnalyzer.Services.Metrics.csproj" />
   </ItemGroup>
 
   <ItemGroup>

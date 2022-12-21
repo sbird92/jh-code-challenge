@@ -16,6 +16,20 @@ public class TweetQueueClient : ITweetQueue
         _logger = logger;
     }
 
+    public bool TryDequeue(out Tweet? tweet)
+    {
+        _logger.LogTrace($"Enquue tweet");
+        tweet = default;
+
+        if(_tweetQueue.TryDequeue(out Tweet? dqtweet))
+        {
+            tweet = dqtweet;
+            return true;
+        }
+
+        return false;
+    }
+
     public void Enqueue(Tweet tweet)
     {
         _logger.LogTrace($"Enquue tweet");

@@ -24,6 +24,7 @@ namespace SCB.TwitterAnalyzer.Services.Tests
         {
             _sampleStreamFixture.LoadTestData("tweet-samples.txt");
             await _sut.StartAsync();
+            //
             _tweetQueueMock.Verify(m => m.Enqueue(It.IsAny<Tweet>()), Times.Exactly(14));
         }
 
@@ -35,7 +36,7 @@ namespace SCB.TwitterAnalyzer.Services.Tests
             _tweetQueueMock.Verify(m => m.Enqueue(It.Is<Tweet>(t => VerifySingleTweet(t))), Times.Exactly(1));
         }
 
-        private bool VerifySingleTweet(Tweet arg)
+        private static bool VerifySingleTweet(Tweet arg)
         {
             arg.CreatedAt.Should().Be(
                 DateTime.ParseExact("2022-12-18T18:47:14.000Z", "yyyy-MM-ddTHH:mm:ss.fffZ", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal));

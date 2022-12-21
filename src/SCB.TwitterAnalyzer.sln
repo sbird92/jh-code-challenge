@@ -5,29 +5,35 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Domain.Models", "SCB.TwitterAnalyzer.Domain.Models\SCB.TwitterAnalyzer.Domain.Models.csproj", "{B1C00F74-2575-4AB0-8FB7-82C3F1A9DA58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Services.Tweets", "SCB.TwitterAnalyzer.Services.TwitterStream\SCB.TwitterAnalyzer.Services.Tweets.csproj", "{E07AEA28-80C2-40ED-8AF9-505B4D40981D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Services.Tweets", "SCB.TwitterAnalyzer.Services.TwitterStream\SCB.TwitterAnalyzer.Services.Tweets.csproj", "{E07AEA28-80C2-40ED-8AF9-505B4D40981D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9101F7CF-FC16-4797-814D-4E0F494B1782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Domain.Services", "SCB.TwitterAnalyzer.DomainServices\SCB.TwitterAnalyzer.Domain.Services.csproj", "{F1ECBAD0-1996-469C-8F05-49B75A381566}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Domain.Services", "SCB.TwitterAnalyzer.DomainServices\SCB.TwitterAnalyzer.Domain.Services.csproj", "{F1ECBAD0-1996-469C-8F05-49B75A381566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.TwitterApi", "SCB.TwitterAnalyzer.Infrastructure\SCB.TwitterAnalyzer.Infrastructure.TwitterApi.csproj", "{4AAC90C9-04A7-49DA-954E-C75E3BF82E00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Infrastructure.TwitterApi", "SCB.TwitterAnalyzer.Infrastructure\SCB.TwitterAnalyzer.Infrastructure.TwitterApi.csproj", "{4AAC90C9-04A7-49DA-954E-C75E3BF82E00}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3FB85131-580E-48F3-8DAE-220E5D8AACFA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D0E4F540-0EB2-4CB4-8C40-5C38A41CC3D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.App", "SCB.TwitterAnalyzer.Infrastruucture.App\SCB.TwitterAnalyzer.Infrastructure.App.csproj", "{EF5C4B22-6050-42CF-9840-07EA936B63C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Infrastructure.App", "SCB.TwitterAnalyzer.Infrastruucture.App\SCB.TwitterAnalyzer.Infrastructure.App.csproj", "{EF5C4B22-6050-42CF-9840-07EA936B63C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Services.Tests", "SCB.TwitterAnalyzer.Services.Tests\SCB.TwitterAnalyzer.Services.Tests.csproj", "{C70CF19D-472E-417D-BAE4-5D4323626D14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Services.Tests", "SCB.TwitterAnalyzer.Services.Tests\SCB.TwitterAnalyzer.Services.Tests.csproj", "{C70CF19D-472E-417D-BAE4-5D4323626D14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.Queue", "SCB.TwitterAnalyzer.Infrastructure.Queue\SCB.TwitterAnalyzer.Infrastructure.Queue.csproj", "{CD663B9C-7941-4E8D-87FD-F45F28EB9708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Infrastructure.Queue", "SCB.TwitterAnalyzer.Infrastructure.Queue\SCB.TwitterAnalyzer.Infrastructure.Queue.csproj", "{CD663B9C-7941-4E8D-87FD-F45F28EB9708}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1804C852-EC90-4FE3-85A1-2444DB161FCA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C23F2F58-645B-40E9-B37E-05D952D6A599}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.Queue.Tests", "SCB.TwitterAnalyzer.Queue.Tests\SCB.TwitterAnalyzer.Infrastructure.Queue.Tests.csproj", "{C4302F95-3A6B-4BB8-A407-0F0279E0C880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCB.TwitterAnalyzer.Infrastructure.Queue.Tests", "SCB.TwitterAnalyzer.Queue.Tests\SCB.TwitterAnalyzer.Infrastructure.Queue.Tests.csproj", "{C4302F95-3A6B-4BB8-A407-0F0279E0C880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Services.Metrics", "SCB.TwitterAnalyzer.Services.Metrics\SCB.TwitterAnalyzer.Services.Metrics.csproj", "{5442A519-6665-4E89-9A38-7C7E4F2A2EF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.MetricsStore", "SCB.TwitterAnalyzer.Infrastructure.MetricsStore\SCB.TwitterAnalyzer.Infrastructure.MetricsStore.csproj", "{96EC9FB0-143E-4CDF-9BB5-23847E41DDF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCB.TwitterAnalyzer.Infrastructure.MetricStore.Tests", "SCB.TwitterAnalyzer.Infrastructure.MetricStore\SCB.TwitterAnalyzer.Infrastructure.MetricStore.Tests.csproj", "{1BB039DE-AD1F-435B-AD3A-7D733DFF2CB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +73,18 @@ Global
 		{C4302F95-3A6B-4BB8-A407-0F0279E0C880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4302F95-3A6B-4BB8-A407-0F0279E0C880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4302F95-3A6B-4BB8-A407-0F0279E0C880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5442A519-6665-4E89-9A38-7C7E4F2A2EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5442A519-6665-4E89-9A38-7C7E4F2A2EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5442A519-6665-4E89-9A38-7C7E4F2A2EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5442A519-6665-4E89-9A38-7C7E4F2A2EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EC9FB0-143E-4CDF-9BB5-23847E41DDF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EC9FB0-143E-4CDF-9BB5-23847E41DDF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EC9FB0-143E-4CDF-9BB5-23847E41DDF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EC9FB0-143E-4CDF-9BB5-23847E41DDF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB039DE-AD1F-435B-AD3A-7D733DFF2CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB039DE-AD1F-435B-AD3A-7D733DFF2CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB039DE-AD1F-435B-AD3A-7D733DFF2CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB039DE-AD1F-435B-AD3A-7D733DFF2CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +100,9 @@ Global
 		{1804C852-EC90-4FE3-85A1-2444DB161FCA} = {D0E4F540-0EB2-4CB4-8C40-5C38A41CC3D4}
 		{C23F2F58-645B-40E9-B37E-05D952D6A599} = {3FB85131-580E-48F3-8DAE-220E5D8AACFA}
 		{C4302F95-3A6B-4BB8-A407-0F0279E0C880} = {C23F2F58-645B-40E9-B37E-05D952D6A599}
+		{5442A519-6665-4E89-9A38-7C7E4F2A2EF1} = {D0E4F540-0EB2-4CB4-8C40-5C38A41CC3D4}
+		{96EC9FB0-143E-4CDF-9BB5-23847E41DDF0} = {3FB85131-580E-48F3-8DAE-220E5D8AACFA}
+		{1BB039DE-AD1F-435B-AD3A-7D733DFF2CB7} = {C23F2F58-645B-40E9-B37E-05D952D6A599}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15D84A2D-AE23-4CDF-86E6-9D59478AF63C}

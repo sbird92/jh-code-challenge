@@ -1,6 +1,6 @@
 ﻿namespace SCB.TwitterAnalyzer.Domain.Services;
 
-public interface IBackgroundService
+public interface IAsyncService
 {
     Task StartAsync();
     Task StopAsync();

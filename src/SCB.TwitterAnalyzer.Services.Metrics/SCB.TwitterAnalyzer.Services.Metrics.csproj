@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SCB.TwitterAnalyzer.Domain.Models\SCB.TwitterAnalyzer.Domain.Models.csproj" />
     <ProjectReference Include="..\SCB.TwitterAnalyzer.DomainServices\SCB.TwitterAnalyzer.Domain.Services.csproj" />
   </ItemGroup>
 

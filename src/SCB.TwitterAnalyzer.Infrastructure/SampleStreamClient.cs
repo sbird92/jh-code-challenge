@@ -19,11 +19,9 @@ public class SampleStreamClient : ISampleStreamClient
     {
         _logger.LogTrace("BEGIN - TWEET STREAM");
         var response = await _httpClient.GetAsync("tweets/sample/stream?tweet.fields=edit_history_tweet_ids,entities,id,lang,source,text,created_at", 
-            HttpCompletionOption.ResponseHeadersRead, 
-            cancellationToken).ConfigureAwait(false);
+            HttpCompletionOption.ResponseHeadersRead, cancellationToken);
 
-        response.EnsureSuccessStatusCode();
-        var stream = await response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+        var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
 
         using var reader = new StreamReader(stream);
         while (!reader.EndOfStream)

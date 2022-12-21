@@ -6,5 +6,6 @@ namespace SCB.TwitterAnalyzer.Domain.Services
     {
         event EventHandler TweetEnqueued;
         void Enqueue(Tweet tweet);
+        bool TryDequeue(out Tweet? tweet);    
     }
 }
