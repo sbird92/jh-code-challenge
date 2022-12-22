@@ -49,14 +49,15 @@ This service will:
 * send metrics to the metrics store.
 
 #### User Interface
-The reporting component begins writing tot he console after 10 seconds, and thereafter refreshes every ten seconds. 
+The reporting component begins writing to the console after 10 seconds, and thereafter refreshes every ten seconds. 
 
-## Additional Features 
+## Additional Features That Should be Addressed
 1. Retry on connection failure
 2. Add configuration for hard coded values
 3. More robust logging - Background ILogger implementation to gather logging and give info on app health
 4. Better error handling for tweet deserialization, bad connection, metric store connection
 5. Metrics are simple counts - need a better scheme to handle more complex aggregation.  
+6. TESTING TESTING TESTING
  
 
 
