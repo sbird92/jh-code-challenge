@@ -59,7 +59,7 @@ namespace SCB.TwitterAnalyzer.Infrastructure.App
         {
             for (int i = 0; i < count; i++)
             {
-                if (i + 1 < metrics.Count())
+                if (i + 1 <= metrics.Count())
                     Console.WriteLine($"{i + 1}) {metrics[i].Key.Replace(replace,"")} : {metrics[i].Value}");
                 else Console.WriteLine($"{i + 1}) ---");
             }

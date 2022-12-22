@@ -33,11 +33,11 @@ public class TweetMetricProcessor : ITweetMetricListener
     }
 
 
-    private void HandleTweetEnqueued(object? sender, EventArgs args)
+    private async Task HandleTweetEnqueued(object? sender, EventArgs args)
     {
         if(_tweetQueue.TryDequeue(out var tweet))
         {
-            ProcessMetricUpdates(tweet);
+            await Task.Run(() => ProcessMetricUpdates(tweet));
             return;
         }
         _logger.LogWarning("No Tweet was removed fromt he tweet queue");

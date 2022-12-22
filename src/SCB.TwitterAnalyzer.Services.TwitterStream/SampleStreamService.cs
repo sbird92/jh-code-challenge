@@ -49,7 +49,7 @@ public class SampleStreamService :  IAsyncService
 
                 var tweet = new Tweet();
                 if (TryDeserializeTweet(tweetString, out tweet))
-                    _tweetQueue.Enqueue(tweet);
+                    await _tweetQueue.EnqueueAsync(tweet);
             }
         }
         catch (Exception ex) 
