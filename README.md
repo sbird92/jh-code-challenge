@@ -9,12 +9,22 @@ The purpose of the app is to demonstrate technique and organization in how I wri
 
 The provided metrics are:
 * Total Number of Tweets*
-* Top 10 Hashtags recieved
+* Top 10 Hashtags recieved*
 * Total distinct Hashtags
 * Top 10 Tweet Languages
 * Total Distinct Tweet Languages
 
 ## Running the Program
+Before running the program replace the Authorization bearer token in the appsettings.json file:
+
+```json
+"HttpClientConfig": {
+  "AuthToken": "{{AUTH_TOKEN}}",
+  "BaseUrl": "https://api.twitter.com/2/"
+}
+```
+
+When debugging logs will be available in the debug output. 
 
 ## Design Considerations
 
