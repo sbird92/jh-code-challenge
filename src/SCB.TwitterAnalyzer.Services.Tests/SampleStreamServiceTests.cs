@@ -25,7 +25,7 @@ namespace SCB.TwitterAnalyzer.Services.Tests
             _sampleStreamFixture.LoadTestData("tweet-samples.txt");
             await _sut.StartAsync();
             //
-            _tweetQueueMock.Verify(m => m.Enqueue(It.IsAny<Tweet>()), Times.Exactly(14));
+            _tweetQueueMock.Verify(m => m.EnqueueAsync(It.IsAny<Tweet>()), Times.Exactly(14));
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace SCB.TwitterAnalyzer.Services.Tests
         {
             _sampleStreamFixture.LoadTestData("tweet-samples-single-tweet.txt");
             await _sut.StartAsync();
-            _tweetQueueMock.Verify(m => m.Enqueue(It.Is<Tweet>(t => VerifySingleTweet(t))), Times.Exactly(1));
+            _tweetQueueMock.Verify(m => m.EnqueueAsync(It.Is<Tweet>(t => VerifySingleTweet(t))), Times.Exactly(1));
         }
 
         private static bool VerifySingleTweet(Tweet arg)

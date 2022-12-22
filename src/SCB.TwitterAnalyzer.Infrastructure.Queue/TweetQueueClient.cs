@@ -7,7 +7,7 @@ namespace SCB.TwitterAnalyzer.Infrastructure.Queue;
 
 public class TweetQueueClient : ITweetQueue
 {
-    public event EventHandler? TweetEnqueued;
+    public event AsyncEventHandler? TweetEnqueued;
     private readonly ConcurrentQueue<Tweet> _tweetQueue = new();
     private readonly ILogger<TweetQueueClient> _logger;
 
@@ -15,7 +15,6 @@ public class TweetQueueClient : ITweetQueue
     {
         _logger = logger;
     }
-
     public bool TryDequeue(out Tweet? tweet)
     {
         _logger.LogTrace($"Enquue tweet");
@@ -30,15 +29,16 @@ public class TweetQueueClient : ITweetQueue
         return false;
     }
 
-    public void Enqueue(Tweet tweet)
+    public async Task EnqueueAsync(Tweet tweet)
     {
         _logger.LogTrace($"Enquue tweet");
         _tweetQueue.Enqueue(tweet);
-        OnTweetEnqueued();
+        await OnTweetEnqueued();
     }
 
-    private void OnTweetEnqueued()
+    private async Task OnTweetEnqueued()
     {
-        TweetEnqueued?.Invoke(this, new EventArgs());
+        if (TweetEnqueued != null)
+            await TweetEnqueued.Invoke(this, new EventArgs());
     }
 }
