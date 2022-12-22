@@ -21,6 +21,7 @@ public class SampleStreamClient : ISampleStreamClient
         var response = await _httpClient.GetAsync("tweets/sample/stream?tweet.fields=edit_history_tweet_ids,entities,id,lang,source,text,created_at", 
             HttpCompletionOption.ResponseHeadersRead, cancellationToken);
 
+        response.EnsureSuccessStatusCode();
         var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
 
         using var reader = new StreamReader(stream);

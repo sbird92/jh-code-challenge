@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using SCB.TwitterAnalyzer.Domain.Services;
 using SCB.TwitterAnalyzer.Infrastructure.MetricsStore;
 using SCB.TwitterAnalyzer.Infrastructure.Queue;
@@ -29,11 +28,13 @@ namespace SCB.TwitterAnalyzer.Infrastructure.App
 
             services.AddSingleton<ITweetQueue, TweetQueueClient>();
             services.AddSingleton<IMetricStore, MetricStore>(_ => new MetricStore(new ConcurrentDictionary<string, long>()));
-            services.AddScoped<MetricUpdater, TweetCountUpdater>();
-            services.AddScoped<MetricUpdater, HashTagCountUpdater>();
-            services.AddScoped<MetricUpdater, LanguageCountUpdater>();
+            services.AddSingleton<MetricUpdater, TweetCountUpdater>();
+            services.AddSingleton<MetricUpdater, HashTagCountUpdater>();
+            services.AddSingleton<MetricUpdater, LanguageCountUpdater>();
             services.AddSingleton<ITweetMetricListener, TweetMetricProcessor>();
             services.AddSingleton<IAsyncService, SampleStreamService>();
+            services.AddSingleton<IMetricService, MetricsService>();
+            services.AddSingleton<ConsoleMetricWriter>();
 
             return services;
         }

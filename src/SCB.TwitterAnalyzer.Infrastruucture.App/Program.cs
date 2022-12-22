@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SCB.TwitterAnalyzer.Domain.Services;
 using SCB.TwitterAnalyzer.Infrastructure.App;
+using System.Diagnostics;
 using System.Net;
 
 var host = Host.CreateDefaultBuilder(args)
@@ -28,12 +29,17 @@ var source = new CancellationTokenSource();
 logger.LogTrace($"--STARTING PRORGAM--");
 var backgroundStream = services.GetRequiredService<IAsyncService>();
 var listener = services.GetRequiredService<ITweetMetricListener>();
+var writer = services.GetRequiredService<ConsoleMetricWriter>();
 
 listener.StartListeningForTweets();
 _ = backgroundStream.StartAsync();
+writer.Start();
 
+Console.WriteLine("Press Esc to end the program");
 while (!(Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape)) { }
 
+writer.Stop();
 await backgroundStream.StopAsync();
 listener.StopListeningForTweets();
+
 Console.WriteLine("--COMPLETE--");

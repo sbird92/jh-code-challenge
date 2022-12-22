@@ -55,6 +55,7 @@ public class SampleStreamService :  IAsyncService
         catch (Exception ex) 
         {
             _logger.LogError(ex, "An error occurred while reading the tweet stream");
+            await StopAsync();
         }
     }
 

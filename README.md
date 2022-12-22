@@ -19,7 +19,13 @@ The purpose of the app is to demonstrate technique and organization in how I wri
 
 ## Running the Program
 
-
+## Additional Features 
+1. Retry on connection failure
+2. Add configuration for hard coded values
+3. More robust logging - Background ILogger implementation to gather logging and give info on app health
+4. Better error handling for tweet deserialization, bad connection, metric store connection
+5. Metrics are simple counts - need a better scheme to handle more complex aggregation.  
+ 
 
 ## Design Considerations
 1. The app should not block statists reporting while processing tweets. (And vice versa.)
@@ -33,8 +39,6 @@ The purpose of the app is to demonstrate technique and organization in how I wri
 There is no requirement to store the Tweets recived in a database or other durable repository. But thought must be given as to how this could be accomplished.
 
 *Code should be considered production ready.*
-
-## Initial Design
 
 ### Description
 The application will be a dotnet console applicaiton, that will run the stream component and the processing component in parallel.  The console will provide an on demand reporting  mechanism as well as an option to periodically refresh automatically.
